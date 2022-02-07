@@ -3,11 +3,12 @@
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.283651, 1, 0.545979 )
 
 [node name="Brick" type="KinematicBody"]
 
 [node name="BrickMesh" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.235606, 0, 0, 0, 0.508862, 0, 0, 0 )
+transform = Transform( 0.265517, 0, 0, 0, 0.314513, 0, 0, 0, 0.272391, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 

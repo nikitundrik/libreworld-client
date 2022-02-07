@@ -1,2 +1,2 @@
-<part name="part1" position="0,0,0"></part> 
-<part name="part2" position="0,0.5,-0.2"></part> 
+<part name="part1" position="0,0,0" scale="10,1,10" color="green"></part>
+<part name="part2" position="10,5,0" scale="5,5,5" color="yellow"></part>
