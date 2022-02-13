@@ -13,6 +13,14 @@ func _physics_process(delta):
 		self.rotate_y(0.08)
 	elif Input.is_action_pressed("right"):
 		self.rotate_y(-0.08)
+	if Input.is_action_pressed("jump") && is_on_floor():
+		vec.y = 10
+		$AnimationPlayer.play("jump")
+	elif is_on_floor() && !(Input.is_action_pressed("forward") or Input.is_action_pressed("backward")):
+		vec.y = 0
+		$AnimationPlayer.play("idle")
+	if Input.is_action_pressed("forward") or Input.is_action_pressed("backward"):
+		$AnimationPlayer.play("walk")
 	move_direction = move_direction.rotated(Vector3.UP, self.rotation.y).normalized()
 	
 	vec.z = -move_direction.z * speed
